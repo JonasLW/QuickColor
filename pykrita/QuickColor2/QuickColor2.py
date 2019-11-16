@@ -1,7 +1,7 @@
 import sys
 from krita import *
 
-class QuickRedExtension(Extension):
+class QuickTwoExtension(Extension):
 
     def __init__(self, parent):
         #Initialising the parent, important when subclassing
@@ -10,19 +10,19 @@ class QuickRedExtension(Extension):
     def setup(self):
         pass
 
-    def swapToRed(self):
-        #Swaps the foreground color to color nr. 5 in the palette called "Teaching"
+    def swapToTwo(self):
+        #Swaps the foreground color to color nr. 2 in the palette called "QuickColor"
         resources = Application.resources("palette")
         view = Krita.instance().activeWindow().activeView()
         for (name, item) in resources.items():
-            if name == "Teaching":
+            if name == "QuickColor":
                 palette = Palette(item)
-                color = palette.colorSetEntryByIndex(5).color()
+                color = palette.colorSetEntryByIndex(2).color()
                 view.setForeGroundColor(color)
 
     def createActions(self, window):
-        action = window.createAction("QuickRed", "QuickRed")
-        action.triggered.connect(self.swapToRed)
+        action = window.createAction("QuickColor2", "QuickColor2")
+        action.triggered.connect(self.swapToTwo)
 
 #Adding extension to Krita's list of extensions
-Krita.instance().addExtension(QuickRedExtension(Krita.instance()))
+Krita.instance().addExtension(QuickTwoExtension(Krita.instance()))

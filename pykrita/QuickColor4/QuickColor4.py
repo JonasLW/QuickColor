@@ -1,7 +1,7 @@
 import sys
 from krita import *
 
-class QuickWhiteExtension(Extension):
+class QuickFourExtension(Extension):
 
     def __init__(self, parent):
         #Initialising the parent, important when subclassing
@@ -10,19 +10,19 @@ class QuickWhiteExtension(Extension):
     def setup(self):
         pass
 
-    def swapToWhite(self):
-        #Swaps the foreground color to color nr. 0 in the palette called "Teaching"
+    def swapToFour(self):
+        #Swaps the foreground color to color nr. 4 in the palette called "QuickColor"
         resources = Application.resources("palette")
         view = Krita.instance().activeWindow().activeView()
         for (name, item) in resources.items():
-            if name == "Teaching":
+            if name == "QuickColor":
                 palette = Palette(item)
-                color = palette.colorSetEntryByIndex(0).color()
+                color = palette.colorSetEntryByIndex(4).color()
                 view.setForeGroundColor(color)
 
     def createActions(self, window):
-        action = window.createAction("QuickWhite", "QuickWhite")
-        action.triggered.connect(self.swapToWhite)
+        action = window.createAction("QuickColor4", "QuickColor4")
+        action.triggered.connect(self.swapToFour)
 
 #Adding extension to Krita's list of extensions
-Krita.instance().addExtension(QuickWhiteExtension(Krita.instance()))
+Krita.instance().addExtension(QuickFourExtension(Krita.instance()))

@@ -1,7 +1,7 @@
 import sys
 from krita import *
 
-class QuickYellowExtension(Extension):
+class QuickOneExtension(Extension):
 
     def __init__(self, parent):
         #Initialising the parent, important when subclassing
@@ -10,19 +10,19 @@ class QuickYellowExtension(Extension):
     def setup(self):
         pass
 
-    def swapToYellow(self):
-        #Swaps the foreground color to color nr. 6 in the palette called "Teaching"
+    def swapToOne(self):
+        #Swaps the foreground color to color nr. 1 in the palette called "QuickColor"
         resources = Application.resources("palette")
         view = Krita.instance().activeWindow().activeView()
         for (name, item) in resources.items():
-            if name == "Teaching":
+            if name == "QuickColor":
                 palette = Palette(item)
-                color = palette.colorSetEntryByIndex(6).color()
+                color = palette.colorSetEntryByIndex(1).color()
                 view.setForeGroundColor(color)
 
     def createActions(self, window):
-        action = window.createAction("QuickYellow", "QuickYellow")
-        action.triggered.connect(self.swapToYellow)
+        action = window.createAction("QuickColor1", "QuickColor1")
+        action.triggered.connect(self.swapToOne)
 
 #Adding extension to Krita's list of extensions
-Krita.instance().addExtension(QuickYellowExtension(Krita.instance()))
+Krita.instance().addExtension(QuickOneExtension(Krita.instance()))
