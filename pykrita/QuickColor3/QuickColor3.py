@@ -15,7 +15,7 @@ class QuickThreeExtension(Extension):
         resources = Application.resources("palette")
         view = Krita.instance().activeWindow().activeView()
         for (name, item) in resources.items():
-            if name == "Teaching":
+            if name == "QuickColor":
                 palette = Palette(item)
                 color = palette.colorSetEntryByIndex(3).color()
                 view.setForeGroundColor(color)
