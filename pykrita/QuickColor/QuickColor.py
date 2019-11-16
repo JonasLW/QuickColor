@@ -20,7 +20,7 @@ class QuickColorExtension(Extension):
                 color = palette.colorSetEntryByIndex(0).color()
                 view.setForeGroundColor(color)
                 
-     def swapToOne(self):
+    def swapToOne(self):
         #Swaps the foreground color to color nr. 1 in the palette called "QuickColor"
         resources = Application.resources("palette")
         view = Krita.instance().activeWindow().activeView()
