@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=Krita/PythonPlugin
+X-KDE-Library=QuickGreen
+X-Python-2-Compatible=false
+Name=QuickGreen
+Comment=A plugin that swaps the foreground color to color 7 from a specific palette
