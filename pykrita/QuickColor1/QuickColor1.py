@@ -17,7 +17,7 @@ class QuickOneExtension(Extension):
         for (name, item) in resources.items():
             if name == "QuickColor":
                 palette = Palette(item)
-                color = palette.colorSetEntryByIndex(4).color()
+                color = palette.colorSetEntryByIndex(1).color()
                 view.setForeGroundColor(color)
 
     def createActions(self, window):
