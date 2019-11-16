@@ -11,7 +11,7 @@ class QuickTwoExtension(Extension):
         pass
 
     def swapToTwo(self):
-        #Swaps the foreground color to color nr. 2 in the palette called "Teaching"
+        #Swaps the foreground color to color nr. 2 in the palette called "QuickColor"
         resources = Application.resources("palette")
         view = Krita.instance().activeWindow().activeView()
         for (name, item) in resources.items():
