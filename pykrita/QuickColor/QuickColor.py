@@ -64,22 +64,18 @@ class QuickColorExtension(Extension):
         action = window.createAction("QuickColor0", "QuickColor0")
         action.triggered.connect(self.swapToZero)
         
-    def createActions(self, window):
         action = window.createAction("QuickColor1", "QuickColor1")
         action.triggered.connect(self.swapToOne)
-    
-    def createActions(self, window):
+        
         action = window.createAction("QuickColor2", "QuickColor2")
         action.triggered.connect(self.swapToTwo)
-
-    def createActions(self, window):
+        
         action = window.createAction("QuickColor3", "QuickColor3")
         action.triggered.connect(self.swapToThree)   
-
-    def createActions(self, window):
+        
         action = window.createAction("QuickColor4", "QuickColor4")
         action.triggered.connect(self.swapToFour)
-
+        
 
 #Adding extension to Krita's list of extensions
 Krita.instance().addExtension(QuickColorExtension(Krita.instance()))
