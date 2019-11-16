@@ -1,1 +1,1 @@
-from .QuickRed import *
+from .QuickColor2 import *
