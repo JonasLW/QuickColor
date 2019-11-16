@@ -3,9 +3,9 @@
     <Actions category="Scripts">
         <text>My Scripts</text>
 
-        <Action name="QuickBlue">
+        <Action name="QuickColor1">
         <icon></icon>
-        <text>Quick swap to blue</text>
+        <text>Quick swap to color 1</text>
         <whatsThis></whatsThis>
         <toolTip></toolTip>
         <iconText></iconText>
