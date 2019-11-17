@@ -9,7 +9,8 @@ Remember to enable the plugin.  Go to settings > configure krita... > python plu
 
 Additionally, you will need to create a palette named "QuickColor", in which you place the colors you would like to hot-swap between.
 
-Finally, you need to go to  settings > configure krita... > keyboard shortcuts and set your desired shortcuts for the actions QuickColor0, QuickColor1, etc. (I personally use ASDF as hotkeys).  
+Finally, you need to go to  settings > configure krita... > keyboard shortcuts and set your desired shortcuts for the actions QuickColor0, QuickColor1, etc. (I personally use ASDF as hotkeys). 
+You should find the actions listed under "My scripts".
 
 This repository currently enables hotkeys for five colors (the five first colors, by index, in the palette you named "QuickColor").
 If you want to extend this functionality, it is fairly simple to just make your own action "QuickColor5", by copying one of the present actions, renaming it, and changing the palette index to 5.
