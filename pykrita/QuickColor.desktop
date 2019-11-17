@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=Krita/PythonPlugin
+X-KDE-Library=QuickColor
+X-Python-2-Compatible=false
+Name=QuickColor
+Comment=A plugin that swaps the foreground color to one of 5 colors from the palette named "QuickColor"
