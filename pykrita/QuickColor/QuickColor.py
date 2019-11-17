@@ -11,7 +11,7 @@ class QuickColorExtension(Extension):
         pass
 
     def swap(self, index):
-        #Swaps the foreground color a color from the palette called "QuickColor", by index
+        #Swaps the foreground color to a color from the palette called "QuickColor", by index
         resources = Application.resources("palette")
         view = Krita.instance().activeWindow().activeView()
         for (name, item) in resources.items():
