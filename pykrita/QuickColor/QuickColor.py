@@ -27,7 +27,7 @@ class QuickColorExtension(Extension):
             view.setForeGroundColor(color)
 
     def createActions(self, window):
-        for n in range(4):
+        for n in range(5):
             name = "QuickColor" + str(n)
             action = window.createAction(name, name)
             action.triggered.connect(functools.partial(self.swap, n))
